@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "octodroid.swanson.com.myapplication"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:design:23.1.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+
+    testCompile 'com.android.support:appcompat-v7:23.1.0'
+    testCompile('org.mockito:mockito-core:1.9.5') {
+    }
+
+    testCompile('org.robolectric:robolectric:2.4')
+    testCompile('com.android.support.test:runner:0.3') {
+        exclude module: 'hamcrest-core'
+    }
+
+    testCompile('com.squareup:fest-android:1.0.8') {
+        exclude group: 'com.android.support'
+    }
+}

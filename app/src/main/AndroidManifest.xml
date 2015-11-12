@@ -1,0 +1,30 @@
+<manifest
+    package="com.swanson.octodroid"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+
+    android:versionName="1.0">
+
+    <category android:name="android.intent.category.LAUNCHER"/>
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="19"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name="com.swanson.octodroid.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher">
+        <activity
+            android:name="com.swanson.octodroid.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
