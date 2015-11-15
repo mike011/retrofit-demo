@@ -7,7 +7,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -148,8 +147,8 @@ public class MainActivity extends Activity implements OnClickListener
 
     private void displayErrorMessage()
     {
-        Toast.makeText(MainActivity.this, "Failed to retrieve the user's repos.",
-                Toast.LENGTH_LONG).show();
+        TextView tv = (TextView) findViewById(R.id.textView);
+        tv.setText("No repos :(");
     }
 
     @Override
